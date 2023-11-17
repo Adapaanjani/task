@@ -1,0 +1,112 @@
+/* Page1.css */
+
+.page1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .welcome-message {
+    max-width: 400px;
+  }
+  
+  .image-slider {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .image-slider-card {
+    border: 2px solid #151414;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  .image-slider-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* styles.css or your preferred styling approach */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.cards-container {
+  display: flex;
+  justify-content: space-around; /* or use 'space-between' for spacing at the ends */
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%; /* Make the image fill the container */
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .image-slider-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    width: calc(50% - 20px); /* 50% width with margin */
+  }
+  .page1 {
+    flex-direction: column;
+  }
+  .image-slider-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .image-slider {
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width: 430px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Add margin between cards */
+  }
+  .image-slider-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+  
+}

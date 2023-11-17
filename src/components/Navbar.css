@@ -1,0 +1,127 @@
+/* Navbar.css */
+
+/* Navbar.css */
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0.8); /* Adjust the alpha value (last parameter) as needed */
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Navbar.css */
+
+.navbar-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  
+  .navbar-toggle .bar {
+    width: 23px;
+    height: 6px;
+    background-color: #333; /* Set your desired color */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .navbar-toggle.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .navbar-toggle.open .bar:nth-child(2) {
+    transform: translateY(-2px) rotate(-45deg);
+  }
+  
+  .navbar-toggle.open .bar:nth-child(3) {
+    transform: translateY(8px) scaleX(0);
+  }
+  
+  /* Rest of your CSS */
+  
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-logo {
+    font-size: 1.5rem; /* Set the initial font size */
+  }
+  
+  .navbar-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+  
+  .sidebar.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #111;
+    padding: 10px;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+/* Navbar.css */
+
+/* YourStyles.css */
+
+.animated-search {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    outline: none;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .open input {
+    width: 200px;
+    visibility: visible;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-logo {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+      }
+    .animated-search {
+      flex: 0; /* Take up remaining space */
+    }
+  }
